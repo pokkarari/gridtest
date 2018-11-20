@@ -1,0 +1,55 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+  font-family: 'メイリオ', Meiryo,'ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif;
+}
+
+.page * {
+  margin: 0;
+}
+
+.page-head img {
+  width: 80px;
+  vertical-align: bottom;
+}
+
+.page-nav, .page-btn-close {
+  display: none;
+}
+
+.page {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr aout;
+  min-height: 100vh;
+}
+
+.page-head {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.page-main {
+  grid-column: 1;
+  grid-row: 2;
+  background-color: #ffe4b5;
+}
+
+.page-nav {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.page-btn, .page-btn-close {
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: start;
+  align-self: center;
+}
+
+.page-foot {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+/*# sourceMappingURL=style2.css.map */

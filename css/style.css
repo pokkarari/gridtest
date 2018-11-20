@@ -190,6 +190,12 @@ body {
     font-size: calc(16px + 4*100vm -768px)/232;
   }
 }
+/* 文章01 */
+.post-text01 {
+  grid-column: 1 / 3;
+  grid-row: 4 / 8;
+}
+
 /* ########  画面の横幅が769px以下  ######## */
 @media (max-width: 767px) {
   .post {
