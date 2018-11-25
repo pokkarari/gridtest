@@ -23,7 +23,7 @@ body {
 .page-head {
   grid-column: 1;
   grid-row: 1;
-  padding: 12px 0;
+  padding: 15px 0;
   background-color: #222;
   text-align: center;
 }
@@ -31,15 +31,36 @@ body {
 .page-main {
   grid-column: 1;
   grid-row: 2;
-  background-color: #ffe4b5;
+  background-color: #fff;
 }
 
 .page-nav {
   grid-column: 1;
   grid-row: 2;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+}
+.page-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.page-nav a {
+  display: block;
+  margin: 30px;
+  border-bottom: solid 1px #aaa;
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
 }
 
-.page-btn, .page-btn-close {
+.open .page-nav {
+  display: block;
+}
+
+.page-btn,
+.page-btn-close {
   grid-column: 1;
   grid-row: 1;
   justify-self: start;
@@ -47,13 +68,21 @@ body {
   padding: 20px;
   border: none;
   background-color: transparent;
-  color: #ffe4b5;
+  color: #fff;
   font-size: 28px;
   cursor: pointer;
 }
 
 .page-btn-close {
   display: none;
+}
+
+.open .page-btn {
+  display: none;
+}
+
+.open .page-btn-close {
+  display: block;
 }
 
 .page-foot {
@@ -64,6 +93,315 @@ body {
   color: #fff;
   text-align: center;
   font-size: 14px;
+}
+
+/* ####### 画面の横幅が1260px以上 ###### */
+@media (min-width: 1260px) {
+  .page {
+    grid-template-columns: 260px 1fr;
+  }
+
+  /* メインコンテンツ */
+  .page-main {
+    grid-column: 2;
+    grid-row: 1 / -1;
+  }
+
+  /* ヘッダー */
+  .page-head {
+    padding: 40px 0;
+  }
+
+  .page-head img {
+    width: 150px;
+  }
+
+  /* ナビゲーション */
+  .page-nav {
+    display: block;
+    background-color: #222;
+  }
+
+  /* ボタン */
+  .page-btn {
+    display: none;
+  }
+
+  /* フッター */
+  .page-foot {
+    padding: 40px 0;
+  }
+}
+/* ++++++++++++   Capter01の設定 ++++++++++++ */
+.post * {
+  margin: 0;
+}
+
+.post img {
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+/* グリッド */
+.post {
+  grid-template-rows: repeat(12, 1fr);
+  grid-column-gap: 40px;
+  padding: 0 30px;
+  font-family: "Noto Sans JP";
+  font-size: 16px;
+  grid-template-columns: repeat(5, 1fr);
+  display: grid;
+}
+
+/* タイトル */
+.post-title {
+  grid-column: 1 / 5;
+  grid-row: 1 / 3;
+  align-self: center;
+  z-index: 10;
+  font-size: 2.8125em;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+/* サブタイトル */
+.post-sub {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  color: #ddd;
+  font-family: "Montserrat" sans-serif;
+  font-size: 3.375em;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  line-height: 1;
+}
+
+/* 日付 */
+.post-date {
+  grid-column: 5;
+  grid-row: 2;
+  justify-self: end;
+  font-family: 'Righteous', cursive;
+  font-size: 0.875em;
+}
+
+/* リード文 */
+.post-lead {
+  grid-column: 1 / 3;
+  grid-row: 3 / 5;
+  font-size: 0.9375em;
+  font-weight: 700;
+  line-height: 1.8;
+}
+
+/* 文章01 */
+.post-text01 {
+  grid-column: 1 / 3;
+  grid-row: 5 / 8;
+  font-size: 0.75em;
+  font-weight: 200;
+  line-height: 2;
+  text-align: justify;
+  text-justify: inter-ideograph;
+}
+
+/*画像01*/
+.post-fig01 {
+  grid-column: 3 / 6;
+  grid-row: 3 / 6;
+  margin-right: -30px;
+}
+.post-fig01 img {
+  height: 100%;
+  object-fit: cover;
+}
+
+/* キャッチコピー */
+.post-catch {
+  grid-column: 3 / 6;
+  grid-row: 6;
+  justify-self: center;
+  align-self: center;
+  margin-left: 30px;
+  font-size: 1.25em;
+  line-height: 1.5;
+  text-align: center;
+  quotes: '“' "”";
+  display: grid;
+  grid-auto-flow: column;
+  grid-column: 5px;
+}
+
+.post-catch::before {
+  content: open-quote;
+}
+
+.post-catch::after {
+  content: close-quote;
+}
+
+.post-catch::before, .post-catch::after {
+  color: #aaa;
+  font-size: 2em;
+  font-weight: 900;
+}
+
+.post-text02 {
+  grid-column: 3 / 5;
+  grid-row: 7 / 13;
+  font-size: 0.75em;
+  font-weight: 200;
+  line-height: 2;
+  text-align: justify;
+  text-justify: inter-ideograph;
+}
+
+/* 画像02 */
+.post-fig02 {
+  grid-column: 1 / 3;
+  grid-row: 8 / 13;
+  align-self: center;
+}
+.post-fig02 figcaption {
+  font-size: 0.625em;
+  font-weight: 500;
+}
+
+.post-sns {
+  grid-column: 5;
+  grid-row: 8 / 13;
+  justify-self: end;
+  align-self: center;
+}
+.post-sns ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-row-gap: 10px;
+}
+.post-sns a {
+  font-size: 1.5em;
+  color: #aaa;
+  text-decoration: none;
+  text-align: center;
+  border: 1px solid #aaa;
+  border-radius: 50%;
+  display: block;
+  width: 2em;
+  line-height: 2em;
+}
+
+.post::after {
+  grid-row: 3 / 7;
+  justify-self: center;
+  align-self: center;
+  width: 15em;
+  height: 15em;
+  content: url("../images/logo.svg");
+  opacity: 0.15;
+  grid-column: 2 / 4;
+}
+
+/* ########  画面の横幅が1000px以上  ######## */
+@media (min-width: 1000px) {
+  .post {
+    width: 1000px;
+    box-sizing: border-box;
+    margin: auto;
+    font-size: 20px;
+  }
+}
+/* ########  画面の横幅が769~999px  ######## */
+@media (max-width: 769px) and (min-width: 999px) {
+  .post {
+    font-size: calc(16px + 4*100vm -768px)/232;
+  }
+}
+/* 文章01 */
+.post-text01 {
+  grid-column: 1 / 3;
+  grid-row: 4 / 8;
+}
+
+/* ########  画面の横幅が769px以下  ######## */
+@media (max-width: 767px) {
+  .post {
+    grid-template-columns: none;
+    grid-template-rows: none;
+    grid-row-gap: 20px;
+    padding: 20px;
+    font-size: 14.4px;
+  }
+
+  .post > *, .post::after {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  /* タイトル */
+  .post-title {
+    grid-column: 1;
+    grid-row: 1;
+    word-break: keep-all;
+  }
+
+  /* マーク画面 */
+  .post::after {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: end;
+    margin-bottom: -50px;
+  }
+
+  /* サブタイトル */
+  .post-sub {
+    grid-column: 1;
+    grid-row: 2;
+    font-size: 24px;
+  }
+
+  /* 日付 */
+  .post-date {
+    grid-column: 1;
+    grid-row: 2;
+    align-self: end;
+  }
+
+  /* リード */
+  .post-lead {
+    font-size: 16px;
+  }
+
+  /* 画像02 */
+  .post-fig01 {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+
+  /* キャッチコピー */
+  .post-catch {
+    margin-left: 0;
+    margin-top: -35px;
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+  }
+
+  /*文章01 文章02*/
+  .post-text01, .post-text02 {
+    font-size: 15px;
+  }
+
+  /* SNSメニュー */
+  .post-sns {
+    justify-self: center;
+  }
+  .post-sns ul {
+    grid-auto-flow: column;
+    grid-column-gap: 20px;
+  }
 }
 
 /*# sourceMappingURL=style2.css.map */
