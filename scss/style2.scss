@@ -4,7 +4,7 @@ body  {margin: 0;
 }
 
 // 基本page
-.page *{
+.page * {
     margin: 0;
 }
 .page-head img{
@@ -12,15 +12,15 @@ body  {margin: 0;
         vertical-align: bottom;
     }
 
-.page-nav, .page-btn-close{
-    display: none;
-}
+// .page-nav, .page-btn-close{
+//     display: none;
+// }
 
 //グリッド
 .page {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr aout;
+    grid-template-rows: auto 1fr auto;
     min-height: 100vh;
 }
 
