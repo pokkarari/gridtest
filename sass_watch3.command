@@ -1,4 +1,4 @@
 #!/bin/sh
 
 cd $(dirname $0)
-sass --style expanded --watch scss/style.scss:css/style.css
+sass --style expanded --watch scss/style3.scss:css/style3.css
