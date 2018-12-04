@@ -25,7 +25,21 @@ body  {margin: 0;
     -webkit-background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
     background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
 }
-.box2 p, .box1 p {
+.box1 p {
+    position:absolute;
+    left:50px;
+    top:50px;
+    text-align:center;
+    background:#fff;
+    width:100px;
+    height:100px;
+    opacity:0.8;
+    line-height:100px;
+    -moz-box-shadow: 2px 2px 5px #333;
+    -webkit-box-shadow: 2px 2px 5px #333;
+    box-shadow: 2px 2px 5px #333;
+}
+.box2 p {
     position:absolute;
     left:50px;
     top:100px;
