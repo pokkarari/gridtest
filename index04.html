@@ -11,20 +11,29 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script> -->
 <script src="js/parallax.min.js"></script>
-<script>
+<script>$(document).ready(function(){
   var layer = document.getElementById('wrap');
   var parallax = new Parallax(layer, {
+        // hoverOnly: true;
     scalarX: 10, //レイヤーの横移動の幅
     scalarY: 10, //レイヤーの縦移動の幅
     frictionX: 0.2, //移動の速度 0～1
     frictionY: 0.2, //移動の速度 0～1
-    originX: 0.5, //マウス入力の横軸初期値,デフォルト0.5
+    originX: 0.8, //マウス入力の横軸初期値,デフォルト0.5
     originY: 0.8 //マウス入力の縦軸初期値,デフォルト0.5
+
+  });
+  var demo = document.getElementById("demo");
+  var parallax = new Parallax(demo,{
+    scalarX: 50, //レイヤーの横移動の幅
+    scalarY: 100 //レイヤーの縦移動の幅
+  });
+
 });
+
 </script>
 <script>
-var demo = document.getElementById("demo");
-var parallax = new Parallax(demo);
+
 </script>
 </head>
 

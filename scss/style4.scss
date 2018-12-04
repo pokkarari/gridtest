@@ -7,6 +7,7 @@ body  {margin: 0;
 
 /* 基本 */
 /* パララックス */
+// 円と四角を動かすデモ
 #wrap {
     position:relative;
     width:400px;
@@ -64,7 +65,7 @@ h1 {
     font-weight:bold;
 }
 
-//
+// 背景が画像のデモ
 
 .sample-demo {
   margin: 0 0 40px 0;
@@ -97,8 +98,8 @@ h1 {
   background-size: cover;
   bottom: 0;
   position: absolute;
-  width: 120%;
-  height: 120%;
+  width: 100%;
+  height: 100%;
   left: -10%;
   top: -10%;
 }

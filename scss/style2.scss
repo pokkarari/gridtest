@@ -1,24 +1,31 @@
 @charset "utf-8";
 
 body  {margin: 0;
-    font-family: 'メイリオ', Meiryo,'ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif}
+    font-family: 'メイリオ', Meiryo,'ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif;
+}
 
 // 基本page
 .page * {
     margin: 0;
 }
 
+<<<<<<< HEAD
 .page-head img {
     width: 80px;
     vertical-align: bottom;
 }
 
+=======
+.page-nav, .page-btn-close{
+    display: none;
+}
+>>>>>>> parent of d1da631... menuを手なおし
 
 //グリッド
 .page {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: auto 1fr aout;
     min-height: 100vh;
 }
 
