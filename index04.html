@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<title>ろう画とは | テスト</title>
+<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="css/style4.css">
+<!-- <script src="js/jquery-3.3.1.min.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script> -->
+<script src="js/parallax.min.js"></script>
+<script>
+  var layer = document.getElementById('wrap');
+  var parallax = new Parallax(layer, {
+    scalarX: 10, //レイヤーの横移動の幅
+    scalarY: 10, //レイヤーの縦移動の幅
+    frictionX: 0.2, //移動の速度 0～1
+    frictionY: 0.2, //移動の速度 0～1
+    originX: 0.5, //マウス入力の横軸初期値,デフォルト0.5
+    originY: 0.8 //マウス入力の縦軸初期値,デフォルト0.5
+});
+</script>
+<script>
+var demo = document.getElementById("demo");
+var parallax = new Parallax(demo);
+</script>
+</head>
+
+
+<body class="page">
+
+<header class="page-head">
+
+</header>
+
+
+
+<main class="page-main">
+<div id="scene">
+  <div date-depth="0.2">最初のレイヤー1</div>
+  <div date-depth="0.6">階層2レイヤー2</div>
+</div>
+
+
+  <h2 class="post-title">パララックスを使いたい
+  </h2>
+  <p class="post-sub">WHONE TO SONOHOKANOMINASAN</p>
+
+<div id="wrap">
+    <div class="layer" data-depth="0.5"><h1>Sample</h1></div>
+    <div class="layer box1" data-depth="1.0"><p>box1</p></div>
+    <div class="layer box2" data-depth="1.5"><p>box2</p></div>
+    <div class="layer box3" data-depth="2.0"><p>box3</p></div>
+    <div class="layer box4" data-depth="3.0"><p>box4</p></div>
+</div>
+
+<div class="sample-demo">
+<ul id="demo" data-friction-x="0.1" data-friction-y="0.1" data-scalar-x="25" data-scalar-y="15">
+<li class="layer" data-depth="0.10"><div class="bg"></div></li>
+<li class="layer" data-depth="0.40"><div class="bg2"></div></li>
+<li class="layer" data-depth="0.70"><div class="img"><img src="images/dassensunzen01.jpg"></div></li>
+<li class="layer" data-depth="1.00"><div class="txt">www.webdlab.com/</div></li>
+</ul>
+<!--sample-demo--></div>
+
+  <time class="post-date" datetime="2020-08-01">
+    <span class="far fa-clock"></span>
+    2020-08-01
+  </time>
+
+  <p class="post-lead">
+    猫がたたずむ。いろんな表情いろんな性格の猫たちを“ろう画”で描いています。
+  </p>
+</main>
+
+<footer class="page-foot">
+    <p>copyright (c)2018 Whone to Sonohokano Minasan</p>
+</footer>
+
+
+<script>
+function myFunc() {
+    document.querySelector('.page').classList.toggle('open');
+}
+</script>
+
+</body>
+</html>
